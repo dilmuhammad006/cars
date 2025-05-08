@@ -38,7 +38,7 @@ export class CarsController {
   async Create(
     @Body() body: Createdto,
     @UploadedFiles(
-      new CheckFilesize(5 * 1024 * 1024),
+      new CheckFilesize(10 * 1024 * 1024),
       new CheckMimeTypes(['jpeg', 'mpeg', 'png', 'jpg']),
     )
     images: Express.Multer.File[],
